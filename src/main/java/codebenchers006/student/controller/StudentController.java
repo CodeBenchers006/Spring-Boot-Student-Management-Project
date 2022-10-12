@@ -59,7 +59,7 @@ public class StudentController {
 		}
 		else
 		{
-			this.studentService.addStudentDetails(studentDTO);
+			Student s = this.studentService.addStudentDetails(studentDTO);
 			return new ResponseEntity<String>("New Student is added", HttpStatus.CREATED);
 		}
 	}

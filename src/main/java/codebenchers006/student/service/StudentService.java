@@ -26,7 +26,7 @@ public class StudentService {
 		return student;
 	}
 
-	public void addStudentDetails(StudentDTO studentDTO) {
+	public Student addStudentDetails(StudentDTO studentDTO) {
 		
 		Student newStudent = new Student();
 		
@@ -36,6 +36,8 @@ public class StudentService {
 		newStudent.setSemester(studentDTO.getSemester());
 		
 		studentRepo.save(newStudent);
+		
+		return newStudent;
 		
 	}
 
